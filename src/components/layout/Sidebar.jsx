@@ -14,7 +14,7 @@ const navItems = [
   { name: 'Settings',   path: '/settings',   icon: Settings },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen, setIsOpen }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -23,7 +23,21 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-slate-900 text-slate-300 h-screen flex flex-col fixed left-0 top-0 z-20 overflow-hidden">
+    <>
+      {/* Backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-20 bg-slate-900/50 backdrop-blur-sm lg:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside
+        className={`w-64 bg-slate-900 text-slate-300 h-screen flex flex-col fixed inset-y-0 left-0 z-30 transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
       {/* Brand */}
       <div className="px-6 pt-7 pb-6 border-b border-slate-800">
         <div className="flex items-center gap-3">
@@ -46,6 +60,7 @@ export default function Sidebar() {
           <NavLink
             key={item.name}
             to={item.path}
+            onClick={() => setIsOpen(false)}
             end={item.path === '/'}
             className={({ isActive }) =>
               `group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 ${
@@ -90,5 +105,6 @@ export default function Sidebar() {
         </button>
       </div>
     </aside>
+    </>
   );
 }

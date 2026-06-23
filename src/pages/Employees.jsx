@@ -74,7 +74,7 @@ export default function Employees() {
 
   return (
     <div className="p-6 space-y-5">
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h2 className="text-2xl font-bold text-slate-900">Employees</h2>
           <p className="text-sm text-slate-500 mt-0.5">
@@ -164,8 +164,8 @@ export default function Employees() {
       {/* Modal */}
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title={editingEmp ? 'Edit Employee' : 'Add Employee'}>
         <form onSubmit={handleSave} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="col-span-2 space-y-1.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="sm:col-span-2 space-y-1.5">
               <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Full Name</label>
               <input required value={form.name} onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))} className={inputClass} placeholder="e.g. Ali Khan" />
             </div>
@@ -179,7 +179,7 @@ export default function Employees() {
               <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Phone</label>
               <input required value={form.phone} onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))} className={inputClass} placeholder="03xx-xxxxxxx" />
             </div>
-            <div className="col-span-2 space-y-1.5">
+            <div className="sm:col-span-2 space-y-1.5">
               <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Monthly Salary (PKR)</label>
               <input required type="number" min="0" value={form.salary} onChange={(e) => setForm((f) => ({ ...f, salary: e.target.value }))} className={inputClass} placeholder="0" />
             </div>

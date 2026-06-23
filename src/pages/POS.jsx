@@ -69,7 +69,7 @@ export default function POS() {
   const totalItems = cart.reduce((s, i) => s + i.quantity, 0);
 
   return (
-    <div className="flex h-[calc(100vh-4rem)] overflow-hidden bg-slate-50">
+    <div className="flex flex-col lg:flex-row h-[calc(100vh-4rem)] overflow-hidden bg-slate-50">
       {/* ── Product Area ──────────────────────────────────────────────── */}
       <div className="flex-1 flex flex-col border-r border-slate-200 overflow-hidden">
 
@@ -151,7 +151,7 @@ export default function POS() {
       </div>
 
       {/* ── Cart ──────────────────────────────────────────────────────── */}
-      <div className="w-80 xl:w-96 bg-white flex flex-col flex-shrink-0 shadow-xl">
+      <div className="w-full lg:w-80 xl:w-96 h-[45%] lg:h-full bg-white flex flex-col flex-shrink-0 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] lg:shadow-xl lg:border-l border-slate-200">
         {/* Cart header */}
         <div className="px-4 py-4 bg-slate-900 text-white flex items-center justify-between flex-shrink-0">
           <div className="flex items-center gap-2">
