@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 245" fill="none">
+
+  <!-- ── T LETTER ── -->
+  <!-- crossbar -->
+  <rect x="10" y="88" width="118" height="38" fill="#0C6B52"/>
+  <!-- stem -->
+  <rect x="50" y="88" width="40" height="132" fill="#0C6B52"/>
+
+  <!-- ── K LETTER ── -->
+  <!-- vertical bar -->
+  <rect x="138" y="88" width="34" height="132" fill="#0C6B52"/>
+  <!-- upper diagonal arm -->
+  <polygon points="172,88 172,154 248,88" fill="#0C6B52"/>
+  <!-- lower diagonal arm -->
+  <polygon points="172,154 172,220 248,220" fill="#0C6B52"/>
+
+  <!-- ── CHEF HAT (gold) ── -->
+  <!-- Hat brim / band -->
+  <rect x="33" y="76" width="70" height="15" rx="7.5" fill="#E9A832"/>
+  <!-- Hat dome body -->
+  <rect x="42" y="34" width="52" height="44" fill="#E9A832"/>
+  <!-- Hat top puff -->
+  <ellipse cx="68" cy="40" rx="28" ry="26" fill="#E9A832"/>
+  <!-- Bridge dome to brim -->
+  <rect x="38" y="58" width="60" height="20" rx="4" fill="#E9A832"/>
+
+  <!-- ── FORK (gold) at lower-right of K, tines pointing left ── -->
+  <g transform="translate(216,172) rotate(-90)">
+    <!-- tines -->
+    <rect x="-18" y="-2" width="6" height="20" rx="3" fill="#E9A832"/>
+    <rect x="-7"  y="-4" width="6" height="22" rx="3" fill="#E9A832"/>
+    <rect x="4"   y="-4" width="6" height="22" rx="3" fill="#E9A832"/>
+    <rect x="15"  y="-2" width="6" height="20" rx="3" fill="#E9A832"/>
+    <!-- neck connecting tines to handle -->
+    <rect x="-18" y="16" width="39" height="9" rx="4.5" fill="#E9A832"/>
+    <!-- handle -->
+    <rect x="-2"  y="23" width="11" height="30" rx="5.5" fill="#E9A832"/>
+  </g>
+
+</svg>
